@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Assignments — Styled Table</title>
+    <style>
+        /* --- Variables for easy theming --- */
+        :root {
+            --bg-body: #0f172a;
+            /* Deep dark blue/slate */
+            --glass-bg: rgba(30, 41, 59, 0.6);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --primary: #38bdf8;
+            /* Light Blue */
+            --secondary: #a855f7;
+            /* Purple */
+            --github-color: #333;
+            --netlify-color: #00ad9f;
+            --hover-row: rgba(255, 255, 255, 0.03);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        /* --- Layout Wrapper --- */
+        .wrap {
+            width: 100%;
+            max-width: 1000px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        /* --- The Table Container (Glass Effect) --- */
+        .table-container {
+            border-radius: 16px;
+            border: 1px solid var(--glass-border);
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            /* Clips corners */
+            padding: 0;
+            /* Remove padding to let table fill */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        /* --- Header Styling --- */
+        thead th {
+            background: rgba(15, 23, 42, 0.8);
+            padding: 16px 24px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            border-bottom: 1px solid var(--glass-border);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        /* Remove default button styles in header */
+        th button {
+            background: none;
+            border: none;
+            color: inherit;
+            font: inherit;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            text-transform: uppercase;
+        }
+
+        th button:hover {
+            color: var(--primary);
+        }
+
+        /* --- Row & Cell Styling --- */
+        tbody tr {
+            transition: background 0.2s ease;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        tbody tr:hover {
+            background: var(--hover-row);
+        }
+
+        td {
+            padding: 16px 24px;
+            font-size: 0.95rem;
+            vertical-align: middle;
+        }
+
+        /* Name Column Specifics */
+        .name-cell {
+            font-weight: 500;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* The little dot indicator */
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--secondary);
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 8px var(--secondary);
+        }
+
+        /* --- Action Buttons (GitHub & Netlify) --- */
+        .btn-link {
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* GitHub Style */
+        .btn-github {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-main);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-github:hover {
+            background: white;
+            color: black;
+        }
+
+        /* Netlify Style */
+        .btn-netlify {
+            background: rgba(0, 173, 159, 0.15);
+            color: #2dd4bf;
+            /* Teal */
+            border: 1px solid rgba(0, 173, 159, 0.3);
+        }
+
+        .btn-netlify:hover {
+            background: #00ad9f;
+            color: white;
+            box-shadow: 0 0 10px rgba(0, 173, 159, 0.4);
+        }
+
+        /* --- Footer --- */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            padding: 0 10px;
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 600px) {
+
+            td,
+            th {
+                padding: 12px 15px;
+            }
+
+            .wrap {
+                padding: 10px;
+            }
+
+            .name-cell {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap" role="region" aria-label="Assignments list">
+        <header>
+            <div>
+                <h1>Assignments Dashboard</h1>
+            </div>
+        </header>
+
+        <div class="table-container">
+            <table id="assignments">
+                <caption>Assignments Table</caption>
+                <thead>
+                    <tr>
+                        <th>
+                            <button data-col="0" aria-label="Sort by name">
+                                Project Name <span aria-hidden>↕</span>
+                            </button>
+                        </th>
+                        <th>
+                            <button data-col="1" aria-label="Sort by date">
+                                Date <span aria-hidden>↕</span>
+                            </button>
+                        </th>
+                        <th>GitHub</th> <th>Netlify</th> </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="name-cell"><span class="dot" aria-hidden></span>Cetaphil</td>
+                        <td>15-09-2025</td>
+                        <td><a href="https://github.com/yourusername/repo" class="btn-link btn-github" target="_blank">Code</a></td>
+                        <td><a href="https://your-project.netlify.app" class="btn-link btn-netlify" target="_blank">Live</a></td>
+                    </tr>
+
+                    <tr>
+                        <td class="name-cell"><span class="dot" aria-hidden></span>Play Station</td>
+                        <td>15-09-2025</td>
+                        <td><a href="#" class="btn-link btn-github">Code</a></td>
+                        <td><a href="#" class="btn-link btn-netlify">Live</a></td>
+                    </tr>
+
+                    <tr>
+                        <td class="name-cell"><span class="dot"></span>True-Classic</td>
+                        <td>15-09-2025</td>
+                        <td><a href="#" class="btn-link btn-github">Code</a></td>
+                        <td><a href="#" class="btn-link btn-netlify">Live</a></td>
+                    </tr>
+                    <tr>
+                        <td class="name-cell"><span class="dot"></span>Icalm</td>
+                        <td>15-09-2025</td>
+                        <td><a href="#" class="btn-link btn-github">Code</a></td>
+                        <td><a href="#" class="btn-link btn-netlify">Live</a></td>
+                    </tr>
+                    <tr>
+                        <td class="name-cell"><span class="dot"></span>Bombay-Closet</td>
+                        <td>15-09-2025</td>
+                        <td><a href="#" class="btn-link btn-github">Code</a></td>
+                        <td><a href="#" class="btn-link btn-netlify">Live</a></td>
+                    </tr>
+                    <tr>
+                        <td class="name-cell"><span class="dot"></span>OnCom</td>
+                        <td>15-09-2025</td>
+                        <td><a href="#" class="btn-link btn-github">Code</a></td>
+                        <td><a href="#" class="btn-link btn-netlify">Live</a></td>
+                    </tr>
+                    
+                    </tbody>
+            </table>
+        </div>
+
+        <div class="footer">
+            <div id="count" class="meta">Rows: <strong>26</strong></div> <div class="meta">Tip: click headers to sort.</div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://images.ctfassets.net/hnk2vsx53n6l/j8Of9gOhy99HaVCSCj0cg/eefed9d20d6f40c405229530c0629259/fw25-holiday-pr-head_to_toe_still-look_1-02.jpg?w=1536&h=864&fm=avif&f=face&fit=fill&q=80');
+    
+}
+
+.nav-bar {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 5.125rem;
+    justify-content: space-between;
+    padding-right: 2rem;
+    padding-left: 2rem;
+
+}
+
+.nav-lft {
+    display: flex;
+    width: 4rem;
+    height: 4rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+}
+
+.nav-main a {
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: white;
+    font-weight: bolder;
+}
+
+.nav-rgt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.hero-text{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60vh;
+    left: 6vw;
+}
+.hero-text p{
+    font-size: 3rem;
+    color: white;
+    font-weight: bolder;
+}
+.hero-text span{
+    font-size: 1.875rem;
+    color: white;
+    font-weight: normal;
+}
+.gender-btn button{
+    width: 9rem;
+    height: 3rem;
+    color: black;
+    font-size: 1rem;
+    border-radius: 2rem;
+    border: none;
+    margin-top: 0.8rem;
+    margin-right: 0.5rem;
+}
+main{
+    width: 93%;
+    margin: auto;
+}
+.section-header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    color: black;
+    font-weight: bolder;
+}
