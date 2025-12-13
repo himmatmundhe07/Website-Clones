@@ -6,18 +6,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Assignments — Styled Table</title>
     <style>
-        /* --- Variables for easy theming --- */
         :root {
             --bg-body: #0f172a;
-            /* Deep dark blue/slate */
             --glass-bg: rgba(30, 41, 59, 0.6);
             --glass-border: rgba(255, 255, 255, 0.08);
             --text-main: #f1f5f9;
             --text-muted: #94a3b8;
             --primary: #38bdf8;
-            /* Light Blue */
             --secondary: #a855f7;
-            /* Purple */
             --github-color: #333;
             --netlify-color: #00ad9f;
             --hover-row: rgba(255, 255, 255, 0.03);
@@ -39,7 +35,6 @@
             padding: 40px 20px;
         }
 
-        /* --- Layout Wrapper --- */
         .wrap {
             width: 100%;
             max-width: 1000px;
@@ -57,7 +52,6 @@
             margin-bottom: 10px;
         }
 
-        /* --- The Table Container (Glass Effect) --- */
         .table-container {
             border-radius: 16px;
             border: 1px solid var(--glass-border);
@@ -66,9 +60,7 @@
             -webkit-backdrop-filter: blur(12px);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
             overflow: hidden;
-            /* Clips corners */
             padding: 0;
-            /* Remove padding to let table fill */
         }
 
         table {
@@ -77,7 +69,6 @@
             text-align: left;
         }
 
-        /* --- Header Styling --- */
         thead th {
             background: rgba(15, 23, 42, 0.8);
             padding: 16px 24px;
@@ -92,7 +83,6 @@
             z-index: 10;
         }
 
-        /* Remove default button styles in header */
         th button {
             background: none;
             border: none;
@@ -109,7 +99,6 @@
             color: var(--primary);
         }
 
-        /* --- Row & Cell Styling --- */
         tbody tr {
             transition: background 0.2s ease;
             border-bottom: 1px solid var(--glass-border);
@@ -129,7 +118,6 @@
             vertical-align: middle;
         }
 
-        /* Name Column Specifics */
         .name-cell {
             font-weight: 500;
             color: var(--text-main);
@@ -138,7 +126,6 @@
             gap: 12px;
         }
 
-        /* The little dot indicator */
         .dot {
             width: 8px;
             height: 8px;
@@ -148,7 +135,6 @@
             box-shadow: 0 0 8px var(--secondary);
         }
 
-        /* --- Action Buttons (GitHub & Netlify) --- */
         .btn-link {
             text-decoration: none;
             padding: 6px 12px;
@@ -161,7 +147,6 @@
             gap: 6px;
         }
 
-        /* GitHub Style */
         .btn-github {
             background: rgba(255, 255, 255, 0.1);
             color: var(--text-main);
@@ -173,11 +158,9 @@
             color: black;
         }
 
-        /* Netlify Style */
         .btn-netlify {
             background: rgba(0, 173, 159, 0.15);
             color: #2dd4bf;
-            /* Teal */
             border: 1px solid rgba(0, 173, 159, 0.3);
         }
 
@@ -187,7 +170,6 @@
             box-shadow: 0 0 10px rgba(0, 173, 159, 0.4);
         }
 
-        /* --- Footer --- */
         .footer {
             display: flex;
             justify-content: space-between;
@@ -196,7 +178,6 @@
             padding: 0 10px;
         }
 
-        /* Responsive tweaks */
         @media (max-width: 600px) {
 
             td,
@@ -238,7 +219,9 @@
                                 Date <span aria-hidden>↕</span>
                             </button>
                         </th>
-                        <th>GitHub</th> <th>Netlify</th> </tr>
+                        <th>GitHub</th>
+                        <th>Netlify</th>
+                    </tr>
                 </thead>
                 <tbody>
                     <tr>
@@ -251,41 +234,42 @@
                     <tr>
                         <td class="name-cell"><span class="dot" aria-hidden></span>Play Station</td>
                         <td>15-09-2025</td>
-                        <td><a href="https://github.com/himmatmundhe07/Website-Clones/tree/master/PlaySation" class="btn-link btn-github">Code</a></td>
-                        <td><a href="playsation.netlify.app" class="btn-link btn-netlify">Live</a></td>
+                        <td><a href="https://github.com/himmatmundhe07/Website-Clones/tree/master/PlaySation" class="btn-link btn-github" target="_blank">Code</a></td>
+                        <td><a href="https://playsation.netlify.app" class="btn-link btn-netlify" target="_blank">Live</a></td>
                     </tr>
 
                     <tr>
                         <td class="name-cell"><span class="dot"></span>True-Classic</td>
                         <td>15-09-2025</td>
-                        <td><a href="https://github.com/himmatmundhe07/Website-Clones/tree/master/True-Classic" class="btn-link btn-github">Code</a></td>
-                        <td><a href="tureclassicbydemu.netlify.app" class="btn-link btn-netlify">Live</a></td>
+                        <td><a href="https://github.com/himmatmundhe07/Website-Clones/tree/master/True-Classic" class="btn-link btn-github" target="_blank">Code</a></td>
+                        <td><a href="https://tureclassicbydemu.netlify.app" class="btn-link btn-netlify" target="_blank">Live</a></td>
                     </tr>
                     <tr>
                         <td class="name-cell"><span class="dot"></span>Icalm</td>
                         <td>15-09-2025</td>
-                        <td><a href="https://github.com/himmatmundhe07/Website-Clones/tree/master/icalm" class="btn-link btn-github">Code</a></td>
-                        <td><a href="icalmbydemu.netlify.app" class="btn-link btn-netlify">Live</a></td>
+                        <td><a href="https://github.com/himmatmundhe07/Website-Clones/tree/master/icalm" class="btn-link btn-github" target="_blank">Code</a></td>
+                        <td><a href="https://icalmbydemu.netlify.app" class="btn-link btn-netlify" target="_blank">Live</a></td>
                     </tr>
                     <tr>
                         <td class="name-cell"><span class="dot"></span>Bombay-Closet</td>
                         <td>15-09-2025</td>
-                        <td><a href="https://github.com/himmatmundhe07/Website-Clones/tree/master/Bombay-closet" class="btn-link btn-github">Code</a></td>
-                        <td><a href="bombay-closet-by-demu.netlify.app" class="btn-link btn-netlify">Live</a></td>
+                        <td><a href="https://github.com/himmatmundhe07/Website-Clones/tree/master/Bombay-closet" class="btn-link btn-github" target="_blank">Code</a></td>
+                        <td><a href="https://bombay-closet-by-demu.netlify.app" class="btn-link btn-netlify" target="_blank">Live</a></td>
                     </tr>
                     <tr>
                         <td class="name-cell"><span class="dot"></span>OnCom</td>
                         <td>15-09-2025</td>
-                        <td><a href="https://github.com/himmatmundhe07/Website-Clones/tree/master/OnCom" class="btn-link btn-github">Code</a></td>
-                        <td><a href="oncom-by-demu.netlify.app" class="btn-link btn-netlify">Live</a></td>
+                        <td><a href="https://github.com/himmatmundhe07/Website-Clones/tree/master/OnCom" class="btn-link btn-github" target="_blank">Code</a></td>
+                        <td><a href="https://oncom-by-demu.netlify.app" class="btn-link btn-netlify" target="_blank">Live</a></td>
                     </tr>
-                    
-                    </tbody>
+
+                </tbody>
             </table>
         </div>
 
         <div class="footer">
-            <div id="count" class="meta">Rows: <strong>26</strong></div> <div class="meta">Tip: click headers to sort.</div>
+            <div id="count" class="meta">Rows: <strong>26</strong></div>
+            <div class="meta">Tip: click headers to sort.</div>
         </div>
     </div>
 </body>
