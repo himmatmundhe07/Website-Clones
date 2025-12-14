@@ -1,0 +1,478 @@
+/* --- Global Reset & Typography --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #111;
+    overflow-x: hidden;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+/* --- Navigation (Top) --- */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3%;
+    background-color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* --- Breadcrumbs --- */
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    padding: 0 3%;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: #333;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+}
+
+.breadcrumbs .arrow {
+    color: #999;
+    margin: 0 5px;
+}
+
+.back-arrow {
+    font-size: 1.2rem;
+    margin-right: 15px;
+    font-weight: 300;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.start-over {
+    margin-left: auto;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-size: 0.7rem;
+    color: #333;
+    cursor: pointer;
+}
+
+/* --- Match Container & Layout --- */
+.match-container {
+    padding: 0 3%;
+    margin-bottom: 4rem;
+}
+
+.match-header {
+    margin-bottom: 2rem;
+}
+
+.match-header h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.match-header p {
+    font-size: 0.8rem;
+    color: #555;
+    font-weight: 400;
+}
+
+.product-layout {
+    display: flex;
+    gap: 3rem;
+}
+
+/* Left: Visuals */
+.product-visuals {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.main-shoe-image {
+    background-color: #f1f1f1;
+    width: 100%;
+    height: 500px; /* Fixed height for consistency */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-shoe-image img {
+    width: 90%;
+    height: auto;
+    mix-blend-mode: multiply; /* Helps blend product on grey bg */
+}
+
+.thumbnails {
+    display: flex;
+    gap: 1rem;
+}
+
+.thumbnails img {
+    width: 60px;
+    height: auto;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.thumbnails img.active-thumb {
+    opacity: 1;
+    border-bottom: 2px solid black;
+    padding-bottom: 2px;
+}
+
+/* Right: Details */
+.product-details {
+    width: 40%;
+    padding-top: 1rem;
+}
+
+.product-details h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.product-details .price {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.product-details .desc {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 3rem;
+    color: #222;
+}
+
+/* Specs Grid */
+.specs-grid {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #ccc;
+    margin-bottom: 2rem;
+}
+
+.spec-item {
+    width: 50%;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.full-width-spec {
+    width: 100%;
+}
+
+.spec-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: #555;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.info-icon {
+    background: #eee;
+    color: #666;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    font-size: 9px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: serif;
+    cursor: help;
+}
+
+.spec-val-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.spec-val-row span {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.icon-box svg {
+    display: block;
+}
+
+/* CTA Button */
+.cta-button {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #333;
+}
+
+/* --- Recommendations --- */
+.recommendations {
+    padding: 2rem 3%;
+    margin-bottom: 4rem;
+}
+
+.recommendations h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.shoe-grid {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto; /* Allow scrolling if screen is small */
+    padding-bottom: 1rem;
+}
+
+.shoe-card {
+    min-width: 200px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.shoe-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    mix-blend-mode: multiply;
+}
+
+.shoe-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.shoe-price {
+    font-size: 0.8rem;
+    color: #555;
+}
+
+/* --- Mission Statement (From Ref) --- */
+.mission-statement {
+    padding: 5rem 3%;
+    max-width: 1400px;
+}
+
+.mission-statement p {
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #000;
+    letter-spacing: -0.02em;
+}
+
+.underline-link {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+/* --- Footer (From Ref) --- */
+footer {
+    padding: 4rem 3% 2rem 3%;
+    background-color: white;
+    margin-top: 2rem;
+}
+
+.footer-top-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+    gap: 2rem;
+}
+
+/* Newsletter */
+.footer-newsletter {
+    width: 35%;
+    max-width: 400px;
+}
+
+.footer-newsletter h4 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    width: 100%;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 1rem;
+    background-color: #f1f1f1;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    color: #000;
+}
+
+/* Support Icons */
+.footer-support {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.icon-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.95rem;
+    color: #222;
+}
+
+.icon-circle {
+    width: 36px;
+    height: 36px;
+    background-color: #e6e6e6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Link Columns */
+.footer-links-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.footer-links-col a {
+    font-size: 0.95rem;
+    color: #111;
+    transition: color 0.2s;
+}
+
+.footer-links-col a:hover {
+    color: #666;
+}
+
+/* Location */
+.location-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 3rem;
+    font-size: 0.9rem;
+}
+
+.flag-icon {
+    display: flex;
+    align-items: center;
+}
+
+/* Bottom Bar */
+.footer-bottom-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.legal-left {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.legal-left a, .legal-left span {
+    font-size: 0.85rem;
+    color: #111;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+    .product-layout {
+        flex-direction: column;
+    }
+    .product-visuals, .product-details {
+        width: 100%;
+    }
+    .main-shoe-image {
+        height: 300px;
+    }
+    .footer-top-grid {
+        flex-direction: column;
+    }
+    .footer-newsletter {
+        width: 100%;
+        max-width: 100%;
+    }
+    .footer-bottom-bar {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+}
