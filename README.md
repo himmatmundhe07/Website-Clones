@@ -73,7 +73,19 @@ Features extensive product grids, review badges, and a "Best Seller" filtering s
 ## 👤 Author
 
 **Himmat Mundhe**
-* GitHub: [himmatmundhe07](https://github.com/himmatmundhe07)
+
+<div align="left">
+  <a href="https://github.com/himmatmundhe07" target="_blank">
+    <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+  </a>
+  <a href="https://www.linkedin.com/in/himmat-mundhe/" target="_blank">
+    <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
+  <a href="https://www.youtube.com/@himmatmundhe07" target="_blank">
+    <img src="https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white" alt="YouTube">
+  </a>
+</div>
+
 
 ---
 *Disclaimer: These projects are created for educational purposes only. All logos, images, and brand names are property of their respective owners.*
