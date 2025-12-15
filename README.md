@@ -53,12 +53,22 @@ This repository contains a central dashboard (`index.html` in the root) that lin
 
 ### PlayStation Clone
 A dark UI focusing on high-quality imagery, hero sections, and grid layouts for game showcases.
+<img width="1407" height="761" alt="image" src="https://github.com/user-attachments/assets/a985c36f-d1dd-42f3-9564-6611c062eec1" />
 
 ### Cetaphil Clone
 Focuses on a clean, white-and-blue color palette, utilizing sticky navigation and detailed product filtering sidebars.
+<img width="1423" height="671" alt="Screenshot 2025-12-15 173042" src="https://github.com/user-attachments/assets/b1f8fbf8-7478-4a73-97aa-d87533a415f0" />
+
+<img width="1410" height="757" alt="image" src="https://github.com/user-attachments/assets/4faa02bb-9b84-4831-a6ca-d8a19e2ccba5" />
 
 ### True Classic Clone
 Features extensive product grids, review badges, and a "Best Seller" filtering system.
+<img width="1406" height="764" alt="Screenshot 2025-12-15 173800" src="https://github.com/user-attachments/assets/e1c476b3-e763-4705-950e-c82df5b768ba" />
+
+<img width="1409" height="764" alt="Screenshot 2025-12-15 173814" src="https://github.com/user-attachments/assets/3f7f6c16-804c-4799-8d8b-00800c441355" />
+
+<img width="1386" height="609" alt="Screenshot 2025-12-15 173826" src="https://github.com/user-attachments/assets/722d1237-8d9f-453d-9efb-438f1fbe678b" />
+
 
 ## 👤 Author
 
